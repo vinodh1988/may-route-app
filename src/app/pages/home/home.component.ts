@@ -14,15 +14,20 @@ tag="inspirational"
   
 
   ngOnInit(): void {
-     this.quotes.callApi().subscribe(
-         {
-           next: (data:any)=>{
-             this.quote = data.content;
-             this.author = data.author;
-           },
-           error: ()=>{}
-         }
-     )
+      this.readQuote()  
+      setInterval(()=>{this.readQuote()},5000)
+  }
+
+  readQuote(){
+    this.quotes.callApi().subscribe(
+      {
+        next: (data:any)=>{
+          this.quote = data.content;
+          this.author = data.author;
+        },
+        error: ()=>{}
+      }
+  )
   }
 
   getQuote(){
