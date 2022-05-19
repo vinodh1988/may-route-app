@@ -9,7 +9,8 @@ import { QuoteService } from 'src/app/services/quote.service';
 export class HomeComponent implements OnInit {
 quote:any="No Quote for the Day";
 author: any="No Author";
-tag="inspirational"
+tag="inspirational";
+results:any;
   constructor(private quotes:QuoteService) { }
   
 
@@ -40,5 +41,12 @@ tag="inspirational"
         error: ()=>{}
       }
   )
-  }
+     this.quotes.getAllRecords(this.tag).subscribe({
+      next: (data:any)=>{
+        this.results = data.results;
+       
+      },
+      error: ()=>{}
+    })
+  } 
 }

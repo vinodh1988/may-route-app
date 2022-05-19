@@ -17,4 +17,7 @@ export class QuoteService {
   callApiByTag(tag:String):Observable<any>{
     return this.http.get("https://api.quotable.io/random?tag="+tag);
 }
+  getAllRecords(tag:String):Observable<any>{
+    return this.http.get("https://api.quotable.io/quotes?tag="+tag);
+  }
 }
