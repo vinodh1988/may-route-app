@@ -1,0 +1,16 @@
+#menu li a{
+    color: white;
+ 
+    text-decoration:none;
+    font-family: arial,sans-serif;
+    font-size: 13px;
+ }
+ 
+ 
+ #menu li{
+     list-style-type:none;
+     float: left;
+     padding:5px;
+     width: 100px;
+     margin: 3px;
+ }
