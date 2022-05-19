@@ -2,10 +2,11 @@
 #page{
     margin-top: 50px;
     width: 1000px;
-    border:1px solid gray;
-    box-shadow: 5px 5px 5px rgb(233, 227, 227);
+    border:1px solid rgb(245, 239, 239);
+    box-shadow: 5px 5px 5px rgb(248, 239, 239);
     padding: 10px;
     min-height:600px;
     margin: 20px;
+    border-radius:5px;
     
 }

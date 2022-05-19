@@ -1,0 +1,17 @@
+h3{
+    font-family: arial;
+    color: darkred;
+
+}
+
+#quote{
+    padding: 20px;
+    background-color: rgb(243, 232, 232);
+    color: darkred;
+    font-family: comic sans MS;
+}
+
+h5{
+    margin: 10px;
+    font-family: forte;
+}
