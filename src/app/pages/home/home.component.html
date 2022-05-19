@@ -1,6 +1,16 @@
 
 <h3>Quote for the day</h3>
-
+<select [(ngModel)]="tag" (change)="getQuote()">
+     <option>education</option>
+     <option>inspirational</option>
+     <option>love</option>
+     <option>proverb</option>
+     <option>success</option>
+     <option>politics</option>
+     <option>science</option>
+     <option>wisdom</option>
+     <option>history</option>
+</select>
 <div id="quote">
      {{quote}}
 

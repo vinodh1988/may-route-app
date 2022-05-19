@@ -9,6 +9,7 @@ import { QuoteService } from 'src/app/services/quote.service';
 export class HomeComponent implements OnInit {
 quote:any="No Quote for the Day";
 author: any="No Author";
+tag="inspirational"
   constructor(private quotes:QuoteService) { }
   
 
@@ -24,4 +25,15 @@ author: any="No Author";
      )
   }
 
+  getQuote(){
+    this.quotes.callApiByTag(this.tag).subscribe(
+      {
+        next: (data:any)=>{
+          this.quote = data.content;
+          this.author = data.author;
+        },
+        error: ()=>{}
+      }
+  )
+  }
 }

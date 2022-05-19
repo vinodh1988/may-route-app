@@ -13,4 +13,8 @@ export class QuoteService {
   callApi():Observable<any>{
       return this.http.get("https://api.quotable.io/random");
   }
+
+  callApiByTag(tag:String):Observable<any>{
+    return this.http.get("https://api.quotable.io/random?tag="+tag);
+}
 }
