@@ -18,16 +18,4 @@
 </div>
 
 <h3>Quotes based on Tag -- {{tag}}</h3>
-<Table>
-     <thead>
-          <th [style.width]="'200px'">Author</th>
-          <th [style.width]="'500px'">Quote</th>
-     </thead>
-     <tbody>
-          <tr *ngFor="let x of results">
-               <th [style.width]="'200px'">{{x.author}}</th>
-               <td [style.width]="'500px'">{{x.content}}</td>
-          </tr>
-     </tbody>
-
-</Table>
+<app-quotes-tab [results]="results"></app-quotes-tab>

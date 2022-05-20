@@ -11,6 +11,8 @@ import { ContactsComponent } from './pages/contacts/contacts.component';
 import { MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { QuotesTabComponent } from './pages/home/quotes-tab/quotes-tab.component';
+import { PersonComponent } from './pages/about/person/person.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FormsModule } from '@angular/forms';
     MenubarComponent,
     HomeComponent,
     AboutComponent,
-    ContactsComponent
+    ContactsComponent,
+    QuotesTabComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,
