@@ -2,10 +2,20 @@
     <!-- #docregion toolbar-row -->
       <mat-toolbar-row>
         <span>Sterling APP</span>
-    <ul id="menu">
-        <li><a routerLink="/"> Home</a></li>
-        <li><a routerLink="/about"> About us</a></li>
-        <li><a routerLink="/service"> Our Service</a></li>
+    <ul id="menu" [style.float]="'left'">
+        <li><a routerLink="/">{{"VARS.Home" | translate}} </a></li>
+        <li><a routerLink="/about"> {{"VARS.About" | translate}}</a></li>
+        <li><a routerLink="/service"> {{"VARS.Services" | translate}}</a></li>
+    </ul>
+    <ul [style.marginLeft]="'150px'" [style.float]="'left'" [style.listStyleType]="'none'">
+          <li>
+               <select [(ngModel)]="lang" (change)="changeLang()">
+                   <option value="english">English</option>
+                   <option value="hindi">हिन्दी</option>
+                   <option value="tamil">தமிழ்</option>
+                   <option value="telugu">తెలుగు</option>
+               </select>
+          </li>
     </ul>
       </mat-toolbar-row>
 </mat-toolbar>

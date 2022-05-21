@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menubar',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menubar.component.css']
 })
 export class MenubarComponent implements OnInit {
-
-  constructor() { }
+  lang:string="english"
+  constructor(public ts:TranslateService) {
+      this.ts.use(this.lang)
+   }
 
   ngOnInit(): void {
   }
-
+  
+  changeLang(){
+    this.ts.use(this.lang)
+  }
 }
