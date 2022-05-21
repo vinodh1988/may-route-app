@@ -1,1 +1,9 @@
-<p>contacts works!</p>
+
+<p>
+   <form [formGroup]="excelForm" (submit)="uploadExcel()">
+       Upload Excel Sheet 
+       <input type=file (change)="uploadFile($event)">
+       <input type="submit" value="Upload Excel Sheet">
+   </form>
+
+<p>
