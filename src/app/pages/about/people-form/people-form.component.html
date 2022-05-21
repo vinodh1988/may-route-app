@@ -6,16 +6,22 @@
         <div class="form-item">
                 <label class="label">Name</label>
                 <input type="text" formControlName="name" >
+                <div *ngIf='myForm.controls.name.hasError("isUpper")'>
+                     First Letter should be upper case</div>
          </div>
 
          <div class="form-item">
            <label class="label">Designation</label>
            <input type="text" formControlName="designation" >
+           <div *ngIf='myForm.controls.designation.hasError("isUpper")'>
+            First Letter should be upper case</div>
          </div>
     
         <div class="form-item">
             <label class="label"> Place</label>
             <input type="text" formControlName="place" >
+            <div *ngIf='myForm.controls.place.hasError("isUpper")'>
+                First Letter should be upper case</div>
         </div>
     
 
