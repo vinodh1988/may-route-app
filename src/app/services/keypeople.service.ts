@@ -12,4 +12,8 @@ export class KeypeopleService {
   getPeople():Observable<any> {
     return this.http.get("http://localhost:8000/keypeople/people")
   }
+
+  addKeyPeople(data:FormData):Observable<any>{
+    return this.http.post("http://localhost:8000/keypeople/people",data);
+  }
 }

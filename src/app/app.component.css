@@ -1,6 +1,7 @@
 
 #page{
     margin-top: 50px;
+    overflow: hidden;
     width: 1000px;
     border:1px solid rgb(245, 239, 239);
     box-shadow: 5px 5px 5px rgb(248, 239, 239);

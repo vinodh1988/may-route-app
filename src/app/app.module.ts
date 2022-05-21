@@ -10,7 +10,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
 import { MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { QuotesTabComponent } from './pages/home/quotes-tab/quotes-tab.component';
 import { PersonComponent } from './pages/about/person/person.component';
 import { PeopleFormComponent } from './pages/about/people-form/people-form.component';
@@ -32,7 +32,8 @@ import { PeopleFormComponent } from './pages/about/people-form/people-form.compo
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

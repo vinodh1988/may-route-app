@@ -1,1 +1,44 @@
-<p>people-form works!</p>
+<form [formGroup]="myForm" (submit)="addPerson()">
+    <div class="container">
+        <h1>Adding a new Person</h1>
+    
+        
+        <div class="form-item">
+                <label class="label">Name</label>
+                <input type="text" formControlName="name" >
+         </div>
+
+         <div class="form-item">
+           <label class="label">Designation</label>
+           <input type="text" formControlName="designation" >
+         </div>
+    
+        <div class="form-item">
+            <label class="label"> Place</label>
+            <input type="text" formControlName="place" >
+        </div>
+    
+
+    
+        <div class="form-item">
+            <label class="label">Photo</label>
+            <input type="file" (change)="uploadFile1($event)">
+        </div>
+        
+        <div class="submit-item" >
+            <h6 *ngIf="!myForm.valid" [style.color]="'red'" [style.textAlign]="'center'">
+                Please  enter all the fields correctly {{myForm.valid}}</h6>
+            <input type="submit" *ngIf="myForm.valid" value="Add Person">
+           
+        </div>
+     
+  
+        
+      
+    
+    
+  
+
+</div>
+
+</form>
