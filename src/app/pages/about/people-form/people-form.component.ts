@@ -38,7 +38,7 @@ myForm:any
   addPerson(){
     var formData: any = new FormData();
     formData.append("name",this.myForm.get('name').value);
-    formData.append("description",this.myForm.get('designation').value);
+    formData.append("designation",this.myForm.get('designation').value);
     formData.append("place",this.myForm.get('place').value);
     formData.append("photo",this.myForm.get('photo').value);
 
