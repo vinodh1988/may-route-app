@@ -9,7 +9,7 @@ import { ExcelService } from 'src/app/services/excel.service';
 })
 export class ContactsComponent implements OnInit {
 excelForm:any;
-json:any="Nothing yet";
+jsondata:any="Nothing yet";
   constructor(private fb:FormBuilder,private es:ExcelService) { 
      this.excelForm = this.fb.group({
          excel:['',[Validators.required]],
@@ -33,7 +33,7 @@ json:any="Nothing yet";
     formData.append("excel",this.excelForm.get('excel').value);
     formData.append("columns",this.excelForm.get('columns').value);
     this.es.uploadExcel(formData).subscribe({
-        next: (data:any)=> this.json=JSON.stringify(data),
+        next: (data:any)=> this.jsondata=data,
         error: ()=> alert("unable to upload")
     })
     

@@ -1,6 +1,19 @@
 <h3>Our Key People</h3>
+<select [(ngModel)] ="desig">
+   <option>President</option>
+   <option>Vice President</option>
+   <option>Branch Manager</option>
+   <option>Regional Manager</option>
+   <option>Zonal Manager</option>
+   <option>Product Head</option>
+   <option>Global Head</option>
+   <option>Manager</option>
+   <option>All</option>
+</select>
 
+<br/>
+<br/>
 
-<app-person *ngFor="let x of people" [person]="x"></app-person>
+<app-person *ngFor="let x of people | peoplefilter:desig" [person]="x"></app-person>
 
 <button mat-raised-button color="primary" (click)="loadDialog()">Add a New Key Person</button>

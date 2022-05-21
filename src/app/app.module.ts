@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { QuotesTabComponent } from './pages/home/quotes-tab/quotes-tab.component';
 import { PersonComponent } from './pages/about/person/person.component';
 import { PeopleFormComponent } from './pages/about/people-form/people-form.component';
+import { PeoplefilterPipe } from './pipes/peoplefilter.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PeopleFormComponent } from './pages/about/people-form/people-form.compo
     ContactsComponent,
     QuotesTabComponent,
     PersonComponent,
-    PeopleFormComponent
+    PeopleFormComponent,
+    PeoplefilterPipe
   ],
   imports: [
     BrowserModule,

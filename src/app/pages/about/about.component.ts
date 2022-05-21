@@ -10,6 +10,7 @@ import { PeopleFormComponent } from './people-form/people-form.component';
 })
 export class AboutComponent implements OnInit {
 people:any=[];
+desig:string="All"
   constructor(private ps:KeypeopleService,private dialog:MatDialog) { }
 
   ngOnInit(): void {
