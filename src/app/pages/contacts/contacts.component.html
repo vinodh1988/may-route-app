@@ -1,9 +1,17 @@
 
-<p>
+
    <form [formGroup]="excelForm" (submit)="uploadExcel()">
-       Upload Excel Sheet 
+       <h3> Upload Excel Sheet </h3>
        <input type=file (change)="uploadFile($event)">
+      
+       <br/>
+       <h3> Columns names with cell mapping</h3>
+       <textarea formControlName="columns">
+
+       </textarea>
+       <h3>---------------------------------------------------------------------------------------------</h3>
        <input type="submit" value="Upload Excel Sheet">
    </form>
 
-<p>
+<h2>Json Result</h2>
+{{json}}
