@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { QuotesTabComponent } from './pages/home/quotes-tab/quotes-tab.component';
 import { PersonComponent } from './pages/about/person/person.component';
+import { PeopleFormComponent } from './pages/about/people-form/people-form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PersonComponent } from './pages/about/person/person.component';
     AboutComponent,
     ContactsComponent,
     QuotesTabComponent,
-    PersonComponent
+    PersonComponent,
+    PeopleFormComponent
   ],
   imports: [
     BrowserModule,

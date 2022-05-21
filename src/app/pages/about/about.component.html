@@ -1,3 +1,6 @@
 <h3>Our Key People</h3>
 
+
 <app-person *ngFor="let x of people" [person]="x"></app-person>
+
+<button mat-raised-button color="primary" (click)="loadDialog()">Add a New Key Person</button>
